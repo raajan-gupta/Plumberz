@@ -31,6 +31,11 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <head>
+        <!-- बाकी head content... -->
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    </head>
 </head>
 
 <body>
@@ -167,51 +172,43 @@
                 <div class="col-lg-8">
                     <div class="bg-light text-center p-5">
                         <h1 class="mb-4">Book For A Service</h1>
-                        <!-- Head में add करें -->
-                        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-                        <!-- Form में ID add करें -->
-                        <form id="booking-form" action="...">
-                            <input type="text" name="from_name" placeholder="Your Name" required>
-                            <input type="email" name="reply_to" placeholder="Your Email" required>
+                        <form id="booking-form">
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" name="from_name" class="form-control border-0"
+                                        placeholder="Your Name" style="height: 55px;" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" name="reply_to" class="form-control border-0"
+                                        placeholder="Your Email" style="height: 55px;" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select name="service_type" class="form-select border-0" style="height: 55px;"
+                                        required>
+                                        <option value="">Select A Service</option>
+                                        <option value="Pipe Repair">Pipe Repair</option>
+                                        <option value="Drain Cleaning">Drain Cleaning</option>
+                                        <option value="Toilet Repair">Toilet Repair</option>
+                                        <option value="Installation">Installation</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="date" name="service_date" class="form-control border-0"
+                                        style="height: 55px;" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="special_request" class="form-control border-0"
+                                        placeholder="Special Request"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <select class="form-select border-0" style="height: 55px;">
-                            <option selected>Select A Service</option>
-                            <option value="1">Service 1</option>
-                            <option value="2">Service 2</option>
-                            <option value="3">Service 3</option>
-                        </select>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <div class="date" id="date1" data-target-input="nearest">
-                            <input type="text" class="form-control border-0 datetimepicker-input"
-                                placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker"
-                                style="height: 55px;">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <textarea class="form-control border-0" placeholder="Special Request"></textarea>
-                    </div>
-                    <!-- बाकी fields -->
-                    <button type="submit">Book Now</button>
-                    </form>
-
-                    <script>
-                        emailjs.init("service_sa48a1k"); // EmailJS से मिलेगा
-
-                        document.getElementById('booking-form').addEventListener('submit', function (event) {
-                            event.preventDefault();
-                            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-                                .then(function () {
-                                    alert('Booking submitted successfully!');
-                                });
-                        });
-                    </script>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- Booking End -->
 
@@ -294,6 +291,24 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        emailjs.init("service_rob68ts"); // EmailJS account से मिलेगा
+
+        document.getElementById('booking-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Form submit करें
+            emailjs.sendForm('service_rob68ts', 'template_43oay1l', this)
+                .then(function () {
+                    alert('Booking submitted successfully! We will contact you soon.');
+                    document.getElementById('booking-form').reset(); // Form clear करें
+                })
+                .catch(function (error) {
+                    alert('Sorry, something went wrong. Please try again.');
+                    console.log('Error:', error);
+                });
+        });
+    </script>
 </body>
 
 </html>
