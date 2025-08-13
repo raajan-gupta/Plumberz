@@ -1,0 +1,200 @@
+ [
+        {
+            "id": 1,
+            "name": "Rohit Sharma",
+            "email": "rohit.sharma@example.com",
+            "designation": "Software Engineer",
+            "salary": 75000,
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "phone": "9876543210"
+        },
+        {
+            "id": 2,
+            "name": "Anjali Verma",
+            "email": "anjali.verma@example.com",
+            "designation": "UI/UX Designer",
+            "salary": 68000,
+            "city": "Bangalore",
+            "state": "Karnataka",
+            "phone": "9123456780"
+        },
+        {
+            "id": 3,
+            "name": "Sandeep Kumar",
+            "email": "sandeep.kumar@example.com",
+            "designation": "Project Manager",
+            "salary": 95000,
+            "city": "Delhi",
+            "state": "Delhi",
+            "phone": "9988776655"
+        },
+        {
+            "id": 4,
+            "name": "Priya Singh",
+            "email": "priya.singh@example.com",
+            "designation": "Backend Developer",
+            "salary": 72000,
+            "city": "Hyderabad",
+            "state": "Telangana",
+            "phone": "9012345678"
+        },
+        {
+            "id": 5,
+            "name": "Vikram Patel",
+            "email": "vikram.patel@example.com",
+            "designation": "QA Engineer",
+            "salary": 65000,
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "phone": "9871234560"
+        }, {
+            "id": 1,
+            "name": "Rohit Sharma",
+            "email": "rohit.sharma@example.com",
+            "designation": "Software Engineer",
+            "salary": 75000,
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "phone": "9876543210"
+        },
+        {
+            "id": 2,
+            "name": "Anjali Verma",
+            "email": "anjali.verma@example.com",
+            "designation": "UI/UX Designer",
+            "salary": 68000,
+            "city": "Bangalore",
+            "state": "Karnataka",
+            "phone": "9123456780"
+        },
+        {
+            "id": 3,
+            "name": "Sandeep Kumar",
+            "email": "sandeep.kumar@example.com",
+            "designation": "Project Manager",
+            "salary": 95000,
+            "city": "Delhi",
+            "state": "Delhi",
+            "phone": "9988776655"
+        },
+        {
+            "id": 4,
+            "name": "Priya Singh",
+            "email": "priya.singh@example.com",
+            "designation": "Backend Developer",
+            "salary": 72000,
+            "city": "Hyderabad",
+            "state": "Telangana",
+            "phone": "9012345678"
+        },
+        {
+            "id": 5,
+            "name": "Vikram Patel",
+            "email": "vikram.patel@example.com",
+            "designation": "QA Engineer",
+            "salary": 65000,
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "phone": "9871234560"
+        },
+        {
+            "id": 1,
+            "name": "Rohit Sharma",
+            "email": "rohit.sharma@example.com",
+            "designation": "Software Engineer",
+            "salary": 75000,
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "phone": "9876543210"
+        },
+        {
+            "id": 2,
+            "name": "Anjali Verma",
+            "email": "anjali.verma@example.com",
+            "designation": "UI/UX Designer",
+            "salary": 68000,
+            "city": "Bangalore",
+            "state": "Karnataka",
+            "phone": "9123456780"
+        },
+        {
+            "id": 3,
+            "name": "Sandeep Kumar",
+            "email": "sandeep.kumar@example.com",
+            "designation": "Project Manager",
+            "salary": 95000,
+            "city": "Delhi",
+            "state": "Delhi",
+            "phone": "9988776655"
+        },
+        {
+            "id": 4,
+            "name": "Priya Singh",
+            "email": "priya.singh@example.com",
+            "designation": "Backend Developer",
+            "salary": 72000,
+            "city": "Hyderabad",
+            "state": "Telangana",
+            "phone": "9012345678"
+        },
+        {
+            "id": 5,
+            "name": "Vikram Patel",
+            "email": "vikram.patel@example.com",
+            "designation": "QA Engineer",
+            "salary": 65000,
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "phone": "9871234560"
+        }, {
+            "id": 1,
+            "name": "Rohit Sharma",
+            "email": "rohit.sharma@example.com",
+            "designation": "Software Engineer",
+            "salary": 75000,
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "phone": "9876543210"
+        },
+        {
+            "id": 2,
+            "name": "Anjali Verma",
+            "email": "anjali.verma@example.com",
+            "designation": "UI/UX Designer",
+            "salary": 68000,
+            "city": "Bangalore",
+            "state": "Karnataka",
+            "phone": "9123456780"
+        },
+        {
+            "id": 3,
+            "name": "Sandeep Kumar",
+            "email": "sandeep.kumar@example.com",
+            "designation": "Project Manager",
+            "salary": 95000,
+            "city": "Delhi",
+            "state": "Delhi",
+            "phone": "9988776655"
+        },
+        {
+            "id": 4,
+            "name": "Priya Singh",
+            "email": "priya.singh@example.com",
+            "designation": "Backend Developer",
+            "salary": 72000,
+            "city": "Hyderabad",
+            "state": "Telangana",
+            "phone": "9012345678"
+        },
+        {
+            "id": 5,
+            "name": "Vikram Patel",
+            "email": "vikram.patel@example.com",
+            "designation": "QA Engineer",
+            "salary": 65000,
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "phone": "9871234560"
+        }
+    ]
