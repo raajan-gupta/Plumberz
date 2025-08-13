@@ -1,22 +1,83 @@
-// create a server 
 
-const express = require("express");
+const express = require('express');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+
 const app = express();
-
 app.use(express.static("static"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public')); // your static files folder
 
-const port = process.env.PORT || 8000;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+// Booking form endpoint
+app.post('/booking', (req, res) => {
+    const { name, email, service, date, request } = req.body;
+
+    // 1️⃣ Log the data (for testing)
+    console.log("New booking:", { name, email, service, date, request });
+
+    // 2️⃣ Send email (optional)
+    const transporter = nodemailer.createTransport({
+        service: 'smtp.gmail.com', // or any SMTP
+        port:587,
+        tls:true,
+        auth: {
+            user: process.env.MAIL_SENDER,
+            pass: process.env.MAIL_PASSWORD // use app password for Gmail
+        }
+    });
+
+    const mailOptions = {
+        from: email,
+        to: 'rajangupta9716@gmail.com', // where you want to receive bookings
+        subject: `New Booking from ${name}`,
+        text: `Name: ${name}\nEmail: ${email}\nService: ${service}\nDate: ${date}\nRequest: ${request}`
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+            return res.send('Error sending booking. Try again later.');
+        } else {
+            console.log('Email sent: ' + info.response);
+            return res.send('Booking successful! We will contact you soon.');
+        }
+    });
+});
+
+app.post('/contact', (req, res) => {
+    const { name, email, message } = req.body;
+
+    const mailOptions = {
+        from: email,
+        to: process.env.MAIL_SENDER,
+        subject: `New Contact Form Submission from ${name}`,
+        text: `
+Name: ${name}
+Email: ${email}
+Message: ${message}
+        `
+    };
+
+    sendMail(mailOptions, res);
+});
+
+app.post('/newsletter', (req, res) => {
+    const { email } = req.body;
+
+    const mailOptions = {
+        from: email,
+        to: process.env.MAIL_SENDER,
+        subject: `New Newsletter Subscription`,
+        text: `Please add ${email} to the newsletter list.`
+    };
+
+    sendMail(mailOptions, res);
 });
 
 
-
-
-
-
-
-
+// Start server
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
 

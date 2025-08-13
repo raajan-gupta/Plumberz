@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-     "build": "echo 'Static site, no build needed'",
+    "build": "echo 'Static site, no build needed'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +11,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.1"
+    "body-parser": "^2.2.0",
+    "express": "^4.21.1",
+    "nodemailer": "^7.0.5"
   }
 }
