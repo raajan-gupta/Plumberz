@@ -1,16 +1,14 @@
 // create a server 
-const express = require("express")
 
-const app = express()
-app.use(express.static("static"))
+const express = require("express");
+const app = express();
 
-app.listen(8000, () => {
-    console.log(`Server is running at https://localhost:8000`)
-})
+app.use(express.static("static"));
 
-
-
-
+const port = process.env.PORT || 8000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
 
 
